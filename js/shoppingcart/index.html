@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body onload="showProducts()">
+    
     <div class="container">
+        <div class="header">
     <h1>Shopping Cart</h1>
-
+        
     <ul>
         <li onclick="showProducts()">Home</li>
-        <li onclick="showCart()">Cart</li>
+        <li onclick="showCart()">Cart(<span id="cartCount"></span>)</li>
     </ul>
+    </div>
     
 
     <hr />

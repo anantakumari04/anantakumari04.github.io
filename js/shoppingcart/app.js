@@ -19,17 +19,26 @@ const showProducts = () => {
   r.innerHTML = str;
 };
 
+const showCount = () =>{
+
+  document.getElementById("cartCount").innerHTML = Object.keys(cart).length;
+
+}
+
 function addToCart(id) {
   cart = { ...cart, [id]: 1 };
+  showCount()
   
 }
 function increment(id) {
   cart = { ...cart, [id]: cart[id] + 1 };
   showCart()
+  showCount()
 }
 function decrement(id) {
   cart = { ...cart, [id]: cart[id] - 1 };
   showCart()
+  showCount()
 }
 function showCart() {
   let str = "";
