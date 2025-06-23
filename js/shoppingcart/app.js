@@ -36,11 +36,17 @@ function showCart() {
   products.map((value) => {
     cart[value.id] > 0 && (str += `<li>${value.name}-$${value.price}-<button onclick='decrement(${value.id})'>-</button>${cart[value.id]}<button onclick='increment(${value.id})'>+</button>-$${value.price*cart[value.id]}</li>`);
   });
+  str += "<div id='orderValueH4'></div>"
   let r = document.getElementById("root");
   r.innerHTML = str;
+  showOrderValue();
 }
 
-const total = products.reduce((sum, value) => {
+const showOrderValue = () =>{
+  const total = products.reduce((sum, value) => {
   return sum + value.price * (cart[value.id] ?? 0);
 }, 0);
-console.log(`Order Value:${total}`);
+document.getElementById("orderValueH4").innerHTML = `Order Value: ${total}`;
+
+}
+
