@@ -31,7 +31,7 @@ db.employees.insertMany([
     date: Date(),
   },
 ]);
-//db.users.find({},{_id:0,name:1})-> only show name first parameter blank means projection all fields will show, second para means name field to show and 1 means true and id 0  means not to show id 
+//db.users.find({},{_id:0,name:1})-> only show name first parameter blank means filter all fields will show, second para means name field to show and 1 means true and id 0  means not to show id // second one projection
 //  db.users.find({},{_id:0,name:1,age:1})
 // [
 //   { name: 'Akshya', age: 21 },
@@ -40,3 +40,23 @@ db.employees.insertMany([
 //   { name: 'Arindam', age: 25 } ]
 
 // db.users.drop()  -> to delete table users
+
+
+db.employees.insertMany([
+  {
+    name: "Amy",
+    email: "amy@gmail.com",
+    department: "HR",
+    salary: 2000,
+    location: ["NY", "TX"],
+    date: Date(),
+  },
+  {
+    name: "Rafeal",
+    email: "rafeal@gmail.com",
+    department: "Admin",
+    salary: 1500,
+    location: ["OH", "TX"],
+    date: Date(),
+  },
+]);
