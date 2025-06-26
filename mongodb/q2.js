@@ -60,3 +60,4 @@ db.employees.insertMany([
     date: Date(),
   },
 ]);
+
