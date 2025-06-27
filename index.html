@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    <h1>Ananta Kumari</h1>
-    <a href="./portfolio/index.html">My Portfolio</a>
-    <br /><br />
+    <style>
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: aqua;
+    }
 
-    <a href="./html/index.html">Html</a>
-    <a href="./css/index.html">CSS</a>
-    <a href="./js/index.html">JS</a>
+    .namec {
+        font-size: 24px;
+        font-weight: bold;
+    }
 
-    <h1>My Projects</h1>
-    <ul>
-      <li><a href="./js/shoppingcart/index.html">Shopping Cart</a></li>
-      <li><a href="./p2/index.html">Project 2</a></li>
-    </ul>
-   
-    
-  </body>
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="namec">Ananta</div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./portfolio/index.html">Portfolio</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./assignments.html">Assignments</a></li>
+            </ul>
+        </nav>
+
+
+        
+    </header>
+</body>
 </html>
