@@ -8,6 +8,8 @@
     --secondary:#070606;
 }
 
+
+
 body{
     font-family:'Poppins',sans-serif;
 }
@@ -36,6 +38,8 @@ header{
       max-width: 540px;
     }
   }
+
+  
   
   @media (min-width: 768px) {
     .container {
@@ -81,21 +85,21 @@ header nav .branding{
 .hero .left img{
     width:400px;
 }
-.hero .right{
+.hero .left{
     color:var(--pure);
 }
-.hero .right h6{
+.hero .left h6{
     font-size:1.6rem;
     color:var(--primary);
     margin-bottom:0.5rem;
 }
-.hero .right h1{
+.hero .left h1{
     font-size:4rem;
     font-weight:100;
     line-height:1.2;
     margin-bottom:2rem;
 }
-.hero .right h1 span{
+.hero .left h1 span{
     color:var(--primary);
 }
 .hero .right p{
@@ -741,4 +745,136 @@ footer .copyright{
     margin-top: 10px;
     font-weight: 600;
     color: #333;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 60px; /* leave space for the button */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.source-btn {
+    position: absolute;
+    bottom: 1px;
+    left: 30%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.source-btn:hover {
+    background-color: gray;
+}
+
+
+.achievements {
+    background-color: rgb(209, 205, 205);
+    padding: 60px 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.achievements .section-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.achievements .container p {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.achievement-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.achievement {
+    background-color: white;
+    padding: 25px 20px;
+    border-left: 5px solid #3DCFD3;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.achievement:hover {
+    transform: translateY(-5px);
+}
+
+.achievement h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(19, 173, 135);
+}
+
+.achievement p {
+    font-size: 15px;
+    color: #444;
+}
+
+.achievement-icon i {
+    font-size: 18px;
+    color: #007bff;
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+.achievement img{
+    width: 30px;
+    height: 50px;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+.achievement-icon:hover i {
+    transform: scale(1.2);
 }
