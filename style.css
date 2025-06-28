@@ -878,3 +878,121 @@ footer .copyright{
 .achievement-icon:hover i {
     transform: scale(1.2);
 }
+/* Default: Desktop-first approach assumed */
+
+/* =======================
+   Tablets (max-width: 992px)
+======================= */
+@media (max-width: 992px) {
+    nav#main-nav .left > div a {
+        margin-right: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .left, .hero .right {
+        flex: unset;
+        width: 100%;
+    }
+
+    .about-inner-wrap {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .achievement-list {
+        grid-template-columns: 1fr;
+    }
+
+    .input-wrap {
+        flex-direction: column;
+    }
+
+    .input-wrap input {
+        margin-bottom: 15px;
+    }
+}
+
+/* =======================
+   Phones (max-width: 768px)
+======================= */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .card-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .social a img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-logo {
+        width: 100px;
+    }
+
+    .footer-socials a img {
+        width: 20px;
+    }
+}
+
+/* =======================
+   Very Small Devices (max-width: 480px)
+======================= */
+@media (max-width: 480px) {
+    header nav a {
+        font-size: 14px;
+        margin-right: 8px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .hero h6 {
+        font-size: 14px;
+    }
+
+    .section-heading {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .contact .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+
+    .footer-socials a img {
+        width: 18px;
+    }
+}
