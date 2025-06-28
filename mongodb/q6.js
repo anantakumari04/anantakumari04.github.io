@@ -167,3 +167,48 @@ db.employees.aggregate([
     }
   }
 ])
+
+db.posts.insertMany([
+    {
+        _id: "p1",
+        post:"Post 1",
+        
+
+    },
+    {
+        _id: "p2",
+        post:"Post 2"
+    }
+])
+
+db.comments.insertMany([
+    {
+        _id: "c1",
+        pid:"p1",
+        comment: "Comment1"
+    },
+    {
+        _id: "c2",
+        pid:"p1",
+        comment: "Comment2"
+    },
+    {
+        _id: "c3",
+        pid:"p2",
+        comment: "Comment1"
+    },
+    {
+        _id: "c4",
+        pid:"p2",
+        comment: "Comment2"
+    },
+    {
+        _id: "c5",
+        pid:"p2",
+        comment: "Comment3"
+    }
+])
+
+
+
+
