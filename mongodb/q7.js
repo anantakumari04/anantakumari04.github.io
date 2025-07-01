@@ -147,6 +147,55 @@ db.studentInfo.aggregate([
 ])
 
 
+//1 part is cond  secod true, third false
+db.employees.aggregate([
+  {$project:{_id:0,name:1, salary:1,Grade: {$cond:[{$gt:["$salary",3000]},"Grade A", "Grade B"]}}}
+])
+
+
+//out used to store in new collection
+db.employees.aggregate([
+  {
+    $project:{
+    _id:0,
+      name:1,
+       salary:1,
+       Grade:{
+        $cond:
+        {
+        if:{$gt:["$salary",3000]},
+        then:"Grade A", 
+        else:"Grade B"
+      }}}
+       },
+       {$out:"GradeWiseSalary"}  //generate new collection
+])
+
+
+db.createView("viewname","collectionname",[query])  //model
+
+//phle view delete krna h then modify krna h then change krna h
+
+db.createView("salaryview","employees",[
+  {
+    $project:{
+    _id:0,
+      name:1,
+      department:1,
+       salary:1,
+       Grade:{
+        $cond:
+        {
+        if:{$gt:["$salary",3000]},
+        then:"Grade A", 
+        else:"Grade B"
+      }}}
+       },
+       
+])
+
+
+
 
 
 
