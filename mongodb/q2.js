@@ -9,6 +9,8 @@ db.employees.insertOne({
   date: Date(),
 });
 
+
+
 db.employees.find(); //toshow the data
 
 show.collections; //shows employee table name
@@ -40,6 +42,7 @@ db.employees.insertMany([
 //   { name: 'Arindam', age: 25 } ]
 
 // db.users.drop()  -> to delete table users
+
 
 
 db.employees.insertMany([
